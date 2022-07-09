@@ -15,7 +15,7 @@ after_success:
   - docker build -t robperch/multi-server ./server
   - docker build -t robperch/multi-worker ./worker
   # Log to docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin docker.io
   # Push images to docker hub
   - docker push robperch/multi-client 
   - docker push robperch/multi-nginx 
